@@ -6,6 +6,7 @@
 
     <parameters>
         <parameter key="fr3d_ldap.ldap_manager.class">FR3D\LdapBundle\Ldap\LdapManager</parameter>
+        <parameter key="security.encoder.ldap_sha.class">FR3D\LdapBundle\Security\User\ShaPasswordEncoder</parameter>
     </parameters>
 
     <services>
@@ -15,6 +16,8 @@
             <argument type="service" id="fr3d_ldap.user_manager" />
             <argument>%fr3d_ldap.ldap_manager.parameters%</argument>
         </service>
+
+        <service id="security.encoder.ldap_sha" class="%security.encoder.ldap_sha.class%"/>
 
     </services>
 

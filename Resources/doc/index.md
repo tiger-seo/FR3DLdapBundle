@@ -65,6 +65,14 @@ security:
       AcmeBundle\Acme\User\LdapUser: plaintext
 ```
 
+#### 3.1 SHA1 password encoder
+
+```yaml
+  encoders:
+      AcmeBundle\Acme\User\LdapUser:
+          id: security.encoder.ldap_sha
+```
+
 ### 4. Configure config.yml
 ``` yaml
 # app/config/config.yml
